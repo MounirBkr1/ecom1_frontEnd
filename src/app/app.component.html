@@ -1,13 +1,11 @@
-<mat-toolbar>
-  <span>My Application</span>
+<mat-toolbar color="primary" class="navbar">
+  <span class="navbar-brand">E-Commerce</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/order" routerLinkActive="active">Track Order</button>
+  <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
+  <button mat-button routerLink="/login" routerLinkActive="active"> Login</button>
+
 </mat-toolbar>
 
-<mat-toolbar-row>
-  <span>Custom Toolbar</span>
-</mat-toolbar-row>
 
-<mat-toolbar-row>
-  <span>Second Line</span>
-  <span class="example-spacer"></span>
-  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-</mat-toolbar-row>
+<router-outlet></router-outlet>
