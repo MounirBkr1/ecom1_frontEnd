@@ -30,6 +30,7 @@ export class SignupComponent {
   }
 
 
+  //showing or not the password
   togglePasswordVisibility() {
     this.hidePassword = !this.hidePassword;
   }
