@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {window} from "rxjs/operators";
+
 
 
 const TOKEN= 'ecom-token'
@@ -14,23 +14,23 @@ export class UserStorageService {
 
 
   public saveToken(token: string):void{
-    // window.localStorage.removeItem(TOKEN);
-    // window.localStorage.setItem(TOKEN, token);
+    window.localStorage.removeItem(TOKEN);
+    window.localStorage.setItem(TOKEN, token);
   }
 
   public saveUser(user):void{
-    // window.localStorage.removeItem(USER);
-    // window.localStorage.setItem(TOKEN, JSON.stringify(user));
+    window.localStorage.removeItem(USER);
+    window.localStorage.setItem(USER, JSON.stringify(user));
   }
 
   static getToken(): string{
-    //return window.localStorage.getItem(TOKEN);
+    return window.localStorage.getItem(TOKEN);
     return "111";
   }
 
   static getUser():any{
 
-    //return JSON.parse(this.localStorage.getItem(USER));
+    return JSON.parse(localStorage.getItem(USER));
   }
 
   static getUserRole():string{
@@ -64,8 +64,8 @@ export class UserStorageService {
 
   //
   static signout():void{
-    // window.localStorage.removeItem(TOKEN);
-    // window.localStorage.removeItem(USER);
+    window.localStorage.removeItem(TOKEN);
+    window.localStorage.removeItem(USER);
 
   }
 

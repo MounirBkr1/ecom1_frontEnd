@@ -31,8 +31,12 @@ export class LoginComponent {
     const username = this.loginForm.get('email')?.value;
     const password = this.loginForm.get('password')?.value;
 
+    console.log(this.loginForm.value);
+
     this.authService.login(username, password).subscribe(
-      (res) => {
+      (res:any) => {
+
+        console.log("im here");
         //this.snackBar.open('Login success','ERROR',{duration: 5000});
         if (UserStorageService.isAdminLoggedIn()) {
           this.router.navigateByUrl("admin/dashboard");
